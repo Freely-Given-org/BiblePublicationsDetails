@@ -65,7 +65,7 @@ See the supplied README.md for more details.
   <header>
     <work>
       <version>0.29</version>
-      <date>2022-08-12</date>
+      <date>2022-08-17</date>
       <title>Bible publications list</title>
       <contributor role="com">Robert Hunt</contributor>
       <rights>Public Domain</rights>
@@ -141,10 +141,28 @@ See the supplied README.md for more details.
   </BiblePublication>
 
   <BiblePublication type="original">
+    <referenceAbbreviation>BHP-GNT</referenceAbbreviation>
+    <languageCode>grc</languageCode>
+    <publicationName lang="en">Bunning Heuristic Prototype Greek New Testament</publicationName>
+    <publicationDate>2017</publicationDate>
+    <publisherName>Center for New Testament Restoration</publisherName>
+    <licence>Creative Commons Attribution-ShareAlike 4.0 International License</licence>
+    <versificationSystem>KJB</versificationSystem>
+    <punctuationSystem>None</punctuationSystem>
+    <bookOrderSystem>Unknown</bookOrderSystem>
+    <booksNamesSystem>None</booksNamesSystem>
+    <includesBooks>MAT MRK LUK JHN ACT ROM CO1 CO2 GAL EPH PHP COL TH1 TH2 TI1 TI2 TIT PHM HEB JAM PE1 PE2 JN1 JN2 JN3 JDE REV</includesBooks>
+    <webLink>https://GitHub.com/greekcntr/BHP</webLink>
+    <webLink>https://GreekCNTR.org</webLink>
+  </BiblePublication>
+
+  <BiblePublication type="original">
     <referenceAbbreviation>SR-GNT</referenceAbbreviation>
     <languageCode>grc</languageCode>
     <publicationName lang="en">Statistical Restoration Greek New Testament</publicationName>
+    <publicationDate>2022</publicationDate>
     <publisherName>Center for New Testament Restoration</publisherName>
+    <licence>Creative Commons Attribution-ShareAlike 4.0 International License</licence>
     <versificationSystem>KJB</versificationSystem>
     <punctuationSystem>None</punctuationSystem>
     <bookOrderSystem>Unknown</bookOrderSystem>
@@ -153,8 +171,6 @@ See the supplied README.md for more details.
     <webLink>https://GreekCNTR.org</webLink>
   </BiblePublication>
 
-
-<!--temp entries-->
   <BiblePublication type="translation">
     <referenceAbbreviation>AMP</referenceAbbreviation>
     <publicationName lang="en">Amplified Bible</publicationName>
@@ -167,12 +183,6 @@ See the supplied README.md for more details.
     <languageCode>en</languageCode>
     <publisherName>H.T. Anderson</publisherName>
     <licence>Public Domain</licence>
-  </BiblePublication>
-
-  <BiblePublication type="translation">
-    <referenceAbbreviation>AV</referenceAbbreviation>
-    <publicationName lang="en">Authorised Version</publicationName>
-    <languageCode>en</languageCode>
   </BiblePublication>
 
    <BiblePublication type="translation">
@@ -314,6 +324,15 @@ See the supplied README.md for more details.
     <referenceAbbreviation>GNB</referenceAbbreviation>
     <publicationName lang="en">Good News Bible</publicationName>
     <languageCode>en</languageCode>
+  </BiblePublication>
+
+  <BiblePublication type="translation">
+    <referenceAbbreviation>ISV</referenceAbbreviation>
+    <publicationName lang="en">The Holy Bible: International Standard Version</publicationName>
+    <languageCode>en</languageCode>
+    <publicationDate>2015</publicationDate>
+    <publisherName>Davidson Press</publisherName>
+    <webLink>https://web.archive.org/web/20160616105413/https://www.isv.org/bible/</webLink>
   </BiblePublication>
 
   <BiblePublication type="translation">
@@ -467,19 +486,21 @@ See the supplied README.md for more details.
     <webLink>https://uasvbible.org</webLink>
   </BiblePublication>
 
-  <BiblePublication type="translation">
+  <BiblePublication type="original">
     <referenceAbbreviation>UGNT</referenceAbbreviation>
     <publicationName lang="en">unfoldingWord® Greek New Testament</publicationName>
     <languageCode>x-grk-koine</languageCode>
+    <derivedFrom>BHP</derivedFrom>
     <publisherName>unfoldingWord®</publisherName>
     <licence>Creative Commons Attribution-ShareAlike 4.0 International License</licence>
     <webLink>https://git.door43.org/unfoldingWord/en_ugnt</webLink>
   </BiblePublication>
 
-  <BiblePublication type="translation">
+  <BiblePublication type="original">
     <referenceAbbreviation>UHB</referenceAbbreviation>
     <publicationName lang="en">unfoldingWord® Hebrew Bible</publicationName>
     <languageCode>hbo</languageCode>
+    <derivedFrom>OSHB</derivedFrom>
     <publisherName>unfoldingWord®</publisherName>
     <licence>Creative Commons Attribution-ShareAlike 4.0 International License</licence>
     <webLink>https://git.door43.org/unfoldingWord/en_uhb</webLink>

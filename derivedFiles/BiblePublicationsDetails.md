@@ -1,11 +1,12 @@
 # Bible Publications Details
 
+## Abbreviations (brief summary)
+
 - AGP: Unknown
 - AKJB: Authorised King James Bible
 - AKJV: American King James Version
 - AMP: Amplified Bible
 - ASV-1901: American Standard Version
-- AV: Authorised Version
 - Alford: Alford Bible
 - Anderson: The New Testament Translated from the Original Greek
 - BB: The Bishops’ Bible
@@ -14,6 +15,7 @@
 - BB-1602: The Bishops’ Bible
 - BBE: Bible in Basic English
 - BHIB: Bible Hub Interlinear Bible
+- BHP-GNT: Bunning Heuristic Prototype Greek New Testament
 - BHS: [('lat', 'Biblia Hebraica Stuttgartensia')]
 - BJ: Unknown
 - BLB: Berean Literal Bible
@@ -94,6 +96,7 @@
 - HCSB-NT: Holman Christian Standard Bible New Testament
 - HEB: Hebrew Scriptures
 - HSE: Holy Scriptures in English
+- ISV: The Holy Bible: International Standard Version
 - JNT: Jewish New Testament
 - JPS: The Holy Scriptures According to the Masoretic Text
 - KJ21: 21st Century King James Version

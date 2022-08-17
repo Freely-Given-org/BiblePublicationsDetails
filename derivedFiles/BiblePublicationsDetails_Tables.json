@@ -286,6 +286,62 @@
         "https://en.wikipedia.org/wiki/Greek_New_Testament"
       ]
     },
+    "BHP-GNT_original": {
+      "referenceAbbreviation": "BHP-GNT",
+      "type": "original",
+      "publicationNames": [
+        [
+          "en",
+          "Bunning Heuristic Prototype Greek New Testament"
+        ]
+      ],
+      "languageCode": "grc",
+      "publicationDate": "2017",
+      "versificationSystem": "KJB",
+      "punctuationSystem": "None",
+      "bookOrderSystem": "Unknown",
+      "booksNamesSystem": "None",
+      "publisherName": [
+        [
+          "en",
+          "Center for New Testament Restoration"
+        ]
+      ],
+      "includesBooks": [
+        "MAT",
+        "MRK",
+        "LUK",
+        "JHN",
+        "ACT",
+        "ROM",
+        "CO1",
+        "CO2",
+        "GAL",
+        "EPH",
+        "PHP",
+        "COL",
+        "TH1",
+        "TH2",
+        "TI1",
+        "TI2",
+        "TIT",
+        "PHM",
+        "HEB",
+        "JAM",
+        "PE1",
+        "PE2",
+        "JN1",
+        "JN2",
+        "JN3",
+        "JDE",
+        "REV"
+      ],
+      "webLink": [
+        "https://GitHub.com/greekcntr/BHP",
+        "https://GreekCNTR.org"
+      ],
+      "licence": "Creative Commons Attribution-ShareAlike 4.0 International License"
+    },
     "SR-GNT_original": {
       "referenceAbbreviation": "SR-GNT",
       "type": "original",
@@ -296,6 +352,7 @@
         ]
       ],
       "languageCode": "grc",
+      "publicationDate": "2022",
       "versificationSystem": "KJB",
       "punctuationSystem": "None",
       "bookOrderSystem": "Unknown",
@@ -337,7 +394,8 @@
       ],
       "webLink": [
         "https://GreekCNTR.org"
-      ]
+      ],
+      "licence": "Creative Commons Attribution-ShareAlike 4.0 International License"
     },
     "AMP_translation": {
       "referenceAbbreviation": "AMP",
@@ -367,17 +425,6 @@
         ]
       ],
       "licence": "Public Domain"
-    },
-    "AV_translation": {
-      "referenceAbbreviation": "AV",
-      "type": "translation",
-      "publicationNames": [
-        [
-          "en",
-          "Authorised Version"
-        ]
-      ],
-      "languageCode": "en"
     },
     "BBE_translation": {
       "referenceAbbreviation": "BBE",
@@ -661,6 +708,27 @@
         ]
       ],
       "languageCode": "en"
+    },
+    "ISV_translation": {
+      "referenceAbbreviation": "ISV",
+      "type": "translation",
+      "publicationNames": [
+        [
+          "en",
+          "The Holy Bible: International Standard Version"
+        ]
+      ],
+      "languageCode": "en",
+      "publicationDate": "2015",
+      "publisherName": [
+        [
+          "en",
+          "Davidson Press"
+        ]
+      ],
+      "webLink": [
+        "https://web.archive.org/web/20160616105413/https://www.isv.org/bible/"
+      ]
     },
     "JPS_translation": {
       "referenceAbbreviation": "JPS",
@@ -1001,9 +1069,9 @@
         "https://uasvbible.org"
       ]
     },
-    "UGNT_translation": {
+    "UGNT_original": {
       "referenceAbbreviation": "UGNT",
-      "type": "translation",
+      "type": "original",
       "publicationNames": [
         [
           "en",
@@ -1017,14 +1085,17 @@
           "unfoldingWord®"
         ]
       ],
+      "derivedFrom": [
+        "BHP"
+      ],
       "webLink": [
         "https://git.door43.org/unfoldingWord/en_ugnt"
       ],
       "licence": "Creative Commons Attribution-ShareAlike 4.0 International License"
     },
-    "UHB_translation": {
+    "UHB_original": {
       "referenceAbbreviation": "UHB",
-      "type": "translation",
+      "type": "original",
       "publicationNames": [
         [
           "en",
@@ -1037,6 +1108,9 @@
           "en",
           "unfoldingWord®"
         ]
+      ],
+      "derivedFrom": [
+        "OSHB"
       ],
       "webLink": [
         "https://git.door43.org/unfoldingWord/en_uhb"
@@ -11176,6 +11250,9 @@
     "NTG": [
       "NTG_original"
     ],
+    "BHP-GNT": [
+      "BHP-GNT_original"
+    ],
     "SR-GNT": [
       "SR-GNT_original"
     ],
@@ -11184,9 +11261,6 @@
     ],
     "Anderson": [
       "Anderson_translation"
-    ],
-    "AV": [
-      "AV_translation"
     ],
     "BBE": [
       "BBE_translation"
@@ -11254,6 +11328,9 @@
     "GNB": [
       "GNB_translation"
     ],
+    "ISV": [
+      "ISV_translation"
+    ],
     "JPS": [
       "JPS_translation"
     ],
@@ -11318,10 +11395,10 @@
       "UASV_translation"
     ],
     "UGNT": [
-      "UGNT_translation"
+      "UGNT_original"
     ],
     "UHB": [
-      "UHB_translation"
+      "UHB_original"
     ],
     "ULT": [
       "ULT_translation"
@@ -11862,6 +11939,12 @@
     "NTG_original": [
       "NTG_original"
     ],
+    "BHP-GNT": [
+      "BHP-GNT_original"
+    ],
+    "BHP-GNT_original": [
+      "BHP-GNT_original"
+    ],
     "SR-GNT": [
       "SR-GNT_original"
     ],
@@ -11879,12 +11962,6 @@
     ],
     "Anderson_translation": [
       "Anderson_translation"
-    ],
-    "AV": [
-      "AV_translation"
-    ],
-    "AV_translation": [
-      "AV_translation"
     ],
     "BBE": [
       "BBE_translation"
@@ -12018,6 +12095,12 @@
     "GNB_translation": [
       "GNB_translation"
     ],
+    "ISV": [
+      "ISV_translation"
+    ],
+    "ISV_translation": [
+      "ISV_translation"
+    ],
     "JPS": [
       "JPS_translation"
     ],
@@ -12145,16 +12228,16 @@
       "UASV_translation"
     ],
     "UGNT": [
-      "UGNT_translation"
+      "UGNT_original"
     ],
-    "UGNT_translation": [
-      "UGNT_translation"
+    "UGNT_original": [
+      "UGNT_original"
     ],
     "UHB": [
-      "UHB_translation"
+      "UHB_original"
     ],
-    "UHB_translation": [
-      "UHB_translation"
+    "UHB_original": [
+      "UHB_original"
     ],
     "ULT": [
       "ULT_translation"

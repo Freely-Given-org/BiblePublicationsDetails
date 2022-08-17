@@ -41,7 +41,7 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 LAST_MODIFIED_DATE = '2022-08-17' # by RJH
 SHORT_PROGRAM_NAME = "BiblePublicationsDetailsConverter"
 PROGRAM_NAME = "Bible Publications Details converter"
-PROGRAM_VERSION = '0.30'
+PROGRAM_VERSION = '0.31'
 programNameVersion = f'{PROGRAM_NAME} v{PROGRAM_VERSION}'
 
 debuggingThisModule = False
@@ -437,6 +437,7 @@ class BiblePublicationsDetailsConverter:
         vPrint( 'Quiet', debuggingThisModule, f"Output BiblePublicationsDetails summary to {filepath}…" )
         with open( filepath, 'wt', encoding='utf-8' ) as myFile:
             myFile.write( "# Bible Publications Details\n\n" )
+            myFile.write( "## Abbreviations (brief summary)\n\n" )
             for abbrev in sorted(indexDict):
                 # print( f"{abbrev=} {indexDict[abbrev][0]=}" )
                 details = dataDict[indexDict[abbrev][0]]['publicationNames']
