@@ -1,0 +1,225 @@
+# Bible Publication Details
+
+AGP: Unknown
+AKJB: Authorised King James Bible
+AKJV: American King James Version
+AMP: Amplified Bible
+ASV-1901: American Standard Version
+AV: Authorised Version
+Alford: Alford Bible
+Anderson: The New Testament Translated from the Original Greek
+BB: The Bishops’ Bible
+BB-1568: The Bishops’ Bible
+BB-1572: The Bishops’ Bible
+BB-1602: The Bishops’ Bible
+BBE: Bible in Basic English
+BHIB: Bible Hub Interlinear Bible
+BHS: [('lat', 'Biblia Hebraica Stuttgartensia')]
+BJ: Unknown
+BLB: Berean Literal Bible
+BNTG-1: Theodore Beza’s Greek New Testament -- 1st edition
+BNTG-10: Theodore Beza’s Greek New Testament -- 10th edition
+BNTG-11: Theodore Beza’s Greek New Testament -- 11th edition
+BNTG-2: Theodore Beza’s Greek New Testament -- 2nd edition
+BNTG-3: Theodore Beza’s Greek New Testament -- 3rd edition
+BNTG-4: Theodore Beza’s Greek New Testament -- 4th edition
+BNTG-5: Theodore Beza’s Greek New Testament -- 5th edition
+BNTG-6: Theodore Beza’s Greek New Testament -- 6th edition
+BNTG-7: Theodore Beza’s Greek New Testament -- 7th edition
+BNTG-8: Theodore Beza’s Greek New Testament -- 8th edition
+BNTG-9: Theodore Beza’s Greek New Testament -- 9th edition
+BRG: Blue Red and Gold Letter Edition Bible
+CB: Coverdale Bible
+CEB: Common English Bible
+CEV: Contemporary English Version
+CEV-NT: Contemporary English Version New Testament
+CJB: Complete Jewish Bible
+CJV: Complete Jewish Bible
+CKJV: Comfort-able King James Version
+CPB: Cambridge Paragraph Bible
+CSB: Christian Standard Bible
+Coverdale: Coverdale Bible
+DBY: Darby Translation
+DHE: The Delitzsch Hebrew Gospels (translation)
+DLNT: Disciples Literal New Testament
+DRA: Douay-Rheims 1899 American Edition
+DRB: [('en', 'The Douay-Rheims Bible'), ('en', 'The Rheims-Douay Bible')]
+DRB-1: Douay-Rheims Bible revision
+DSS: The Dead Sea Scrolls: A New Translation
+EBR: Emphasized Bible
+EBR-NT-1: New Testament Critically Emphasised
+EBR-NT-2: New Testament Critically Emphasised
+EBR-NT-3: New Testament Critically Emphasised
+ECB: exeGeses Companion Bible
+EHV: Evangelical Heritage Version: New Testament & Psalms
+EL-1: Erasmus’ Latin New Testament -- 1st edition
+EMTV: English Majority Text Version: New Testament
+ENTG-1: Erasmus’ Greek New Testament -- 1st edition
+ENTG-2: Erasmus’ Greek New Testament -- 2nd edition
+ENTG-3: Erasmus’ Greek New Testament -- 3rd edition
+ENTG-4: Erasmus’ Greek New Testament -- nth edition
+ENTG-5: Erasmus’ Greek New Testament -- nth edition
+ERV: Easy-to-Read Version
+ESV: English Standard Version
+EXV: The Expanded Bible
+GB: Geneva Bible
+GENERIC: Generic with Deuterocanon
+GENERIC-80-RU: Generic Russian with Deuterocanon
+GENERIC-Catholic-80: Generic with Deuterocanon
+GENERIC-CatholicEsther16-80: Generic with Deuterocanon
+GENERIC-EN: Generic with Deuterocanon
+GENERIC-German-80: Generic with Deuterocanon
+GENERIC-KJB-66: Generic Protestant
+GENERIC-KJB-66-EN: Generic English Protestant
+GENERIC-KJB-80: Generic with Deuterocanon
+GENERIC-KJB-80-EN: Generic English with Deuterocanon
+GENERIC-KJB-EN: Generic English with Deuterocanon
+GENERIC-Leningrad-80: Generic with Deuterocanon
+GENERIC-NRSV-80: Generic with Deuterocanon
+GENERIC-Original-80: Generic with Deuterocanon
+GENERIC-RSV-80: Generic with Deuterocanon
+GENERIC-Synodal-80: Generic with Deuterocanon
+GENERIC-Vulgate-82: Generic with Deuterocanon
+GNB: Good News Bible
+GNC: God’s New Covenant: A New Testament Translation
+GNT: [('en', 'Good News Bible'), ('en', 'Good News Translation'), ('en', 'Today’s English Version')]
+GNT-NT: [('en', 'Good News Bible New Testament'), ('en', 'Good News Translation New Testament'), ('en', 'Today’s English Version New Testament')]
+GW: God’s Word
+GenB: Geneva Bible
+GenB-NT: Geneva Bible New Testament
+GoodSp: The New Testament: An American Translation
+GrtB: [('en', 'Great Bible'), ('en', 'Cromwell Bible'), ('en', 'Whitchurch’s Bible'), ('en', 'The Chained Bible')]
+HARWOOD: Harwood Bible
+HCSB: Holman Christian Standard Bible
+HCSB-NT: Holman Christian Standard Bible New Testament
+HEB: Hebrew Scriptures
+HSE: Holy Scriptures in English
+JNT: Jewish New Testament
+JPS: The Holy Scriptures According to the Masoretic Text
+KJ21: 21st Century King James Version
+KJB: King James Bible
+KJB-1611: [('en', 'King James Bible'), ('en', 'King James Version'), ('en', 'Authorized Version')]
+KJB-1611!BB: [('en', 'King James Version'), ('en', 'Authorized Version'), ('en', 'Also known as "The Basketball Bible"')]
+KJB-1611a: [('en', 'King James Version'), ('en', 'Also known as "The Judas Bible"')]
+KJB-1629: [('en', 'King James Version -- 1st revision'), ('en', 'Authorized Version -- 1st revision')]
+KJB-1631: [('en', 'King James Version'), ('en', 'Also known as "The Wicked Bible"')]
+KJB-1638: [('en', 'King James Version -- 2nd revision'), ('en', 'Authorized Version -- 2nd revision')]
+KJB-1653: [('en', 'King James Version'), ('en', 'Also known as "The Unrighteous Bible"')]
+KJB-1726: King James Version
+KJB-1727: [('en', 'King James Version'), ('en', 'Also known as "The Vinegar Bible"')]
+KJB-1762: [('en', 'King James Version -- 3rd revision'), ('en', 'Authorized Version -- 3rd revision')]
+KJB-1769: [('en', 'King James Version -- 4th revision'), ('en', 'Authorized Version -- 4th revision')]
+KJB-1769!edition: [('en', 'King James Version'), ('en', 'Authorized Version')]
+KJB-1792: King James Version
+KJB-1795: [('en', 'King James Version'), ('en', 'Also known as "The Murderers Bible"')]
+KJB-1807: King James Version Oxford Edition
+KJB-1964: King James Version
+KJV2000: King James 2000 Version
+KJVER: King James Version Easy Reading
+KTK: Keys of the Kingdom Holy Bible
+LB: Living Bible
+LSB: Legacy Standard Bible
+LSV: Literal Standard Version
+LUT: Luther Bible
+LXX: [('en', 'Septuagint Translation of the Hebrew Bible'), ('en', 'LXX')]
+MACE: Mace Bible
+MB: Matthew’s Bible
+MBT-2002: Matigsalug
+MBT-2005: Matigsalug
+MBT-2010: Matigsalug
+MBT-2010!NT: Matigsalug NT+
+MBT-2022: Matigsalug
+MBT-MB-2002: Matigsalug MiniBible
+MBT-MB-2005: Matigsalug MiniBible
+MENTEL: Mentel Bible
+MJLT: Messianic Jewish Literal Translation
+MKJV: Modern King James Version
+MSG: The Message: The Bible in Contemporary Language
+MSG-NT: The Message New Testament
+MW: The Messianic Writings
+MYB: Maayong Balita
+NASB: New American Standard Version
+NASB-NT: New American Standard Bible New Testament
+NASB71: New American Standard Bible
+NASB95: New American Standard Bible
+NCPB: New Cambridge Paragraph Bible
+NEB: New English Bible
+NET: [('en', 'The NET Bible'), ('en', 'New English Translation')]
+NIV: New International Version Bible
+NIV-2011: New International Version Bible
+NIV-NT: New International Version Bible New Testament
+NIVI: New International Version Inclusive Language Bible
+NIrV: New International Readers Version Bible
+NIrV-NT: New International Readers Version Bible New Testament
+NIrV-OT: New International Readers Version Bible Old Testament
+NKJB: Mew King James Bible
+NKJB-NT: Mew King James Bible New Testament
+NLT: New Living Translation
+NLTse: New Living Translation Second Edition
+NLTse-2: New Living Translation Second Edition
+NRSV: New Revised Standard Version
+NTG: Greek Scriptures
+NTLT: The New Testament in the Language of Today: An American Translation
+OEB: Open English Bible
+OET: Open English Translation
+OJB: Orthodox Jewish Bible
+ORIGINAL: Original Hebrew and Greek
+OSHB: Open Scriptures Hebrew Bible
+REB: Revised English Bible
+REV: Revised English Version
+RGT: Revised Geneva Translation
+RSV: Revised Standard Version
+RSV!edition: Revised Standard Version
+RSV-CE: Revised Standard Version, Catholic Edition
+RSV-NT: Revised Standard Version New Testament
+RSV52: Revised Standard Version
+RSV71: Revised Standard Version
+RV-DC: Revised Version Apocrypha
+RV-NT: Revised Version New Testament
+RV-OT: Revised Version Old Testament
+RVA: Reina-Valera Antigua
+SLT: Smith’s Literal Translation of the Bible
+SNTG-1: Stephanus’ Greek New Testament -- 1st edition
+SNTG-2: Stephanus’ Greek New Testament -- 2nd edition
+SNTG-3: Stephanus’ Greek New Testament -- 3rd edition
+SNTG-4: Stephanus’ Greek New Testament -- 4th edition
+SPORREL: Sporrel Old Testament
+SR-GNT: Statistical Restoration Greek New Testament
+TCNT: Twentieth Century New Testament
+TEV: Today’s English Version
+TLB: The Living Bible
+TNIV: Today’s New International Version Bible
+TNIV-NT: Today’s New International Version Bible New Testament
+TPT: The Passion Translation
+TYN-1526: Tyndale Bible
+TYN-2nd: Tyndale New Testament -- 2nd edition
+TYN-3rd: Tyndale New Testament -- 3rd edition
+TYN-NT-1526: Tyndale New Testament
+TYN-NT-2: Tyndale New Testament -- 2nd edition
+TYN-NT-3: Tyndale New Testament -- 3rd edition
+TYN-NT-4: Tyndale New Testament -- 4th edition
+TYN-NT-5: Tyndale New Testament -- 5th edition
+UASV: Updated American Standard Version
+UGNT: unfoldingWord® Greek New Testament
+UHB: unfoldingWord® Hebrew Bible
+UKJV: Updated King James Version
+ULT: unfoldingWord® Literal Text
+UST: unfoldingWord® Simplified Text
+VUL: [('en', 'Vulgate'), ('lat', 'Versio Vulgata'), ('lat', 'Biblia Sacra Vulgata')]
+Voice: The Voice Bible
+WE: Worldwide English New Testament
+WEB: World English Bible
+WEB-NT: World English Bible New Testament
+WEBSTER: [('en', 'The Common Version'), ('en', 'Webster Bible'), ('en', 'Webster’s Revision')]
+WELLS: The Common Translation Corrected
+WESLEY: Wesley Bible
+WHITBY: Whitby Version
+WISTON: The Primitive New Testament
+WLC: Westminster Leningrad Codex
+WMB: World Messianic Bible
+WNT: Weymouth New Testament
+WYC-1382: Wycliffe Bible
+WYC-1395: Wycliffe Bible
+YLT: Young’s Literal Translation
+YLT2: Young’s Literal Translation
+YLT3: Young’s Literal Translation
