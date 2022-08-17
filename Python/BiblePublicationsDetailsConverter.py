@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# BiblePublicationDetailsConverter.py
+# BiblePublicationsDetailsConverter.py
 #
-# Module handling BiblePublicationDetails.xml to produce C and Python data tables
+# Module handling BiblePublicationsDetails.xml to produce C and Python data tables
 #
 # Copyright (C) 2010-2022 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
@@ -23,7 +23,7 @@
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 """
-Module handling BiblePublicationDetails.xml to produce C and Python data tables.
+Module handling BiblePublicationsDetails.xml to produce C and Python data tables.
 """
 
 from gettext import gettext as _
@@ -39,8 +39,8 @@ from BibleOrgSysGlobals import fnPrint, vPrint, dPrint
 
 
 LAST_MODIFIED_DATE = '2022-08-17' # by RJH
-SHORT_PROGRAM_NAME = "BiblePublicationDetailsConverter"
-PROGRAM_NAME = "Bible Publication Details converter"
+SHORT_PROGRAM_NAME = "BiblePublicationsDetailsConverter"
+PROGRAM_NAME = "Bible Publications Details converter"
 PROGRAM_VERSION = '0.30'
 programNameVersion = f'{PROGRAM_NAME} v{PROGRAM_VERSION}'
 
@@ -49,9 +49,9 @@ debuggingThisModule = False
 
 
 # @singleton # Can only ever have one instance
-class BiblePublicationDetailsConverter:
+class BiblePublicationsDetailsConverter:
     """
-    Class for handling and converting BiblePublicationDetails.
+    Class for handling and converting BiblePublicationsDetails.
     """
 
     def __init__( self ) -> None:
@@ -60,7 +60,7 @@ class BiblePublicationDetailsConverter:
         Loads (and crudely validates the XML file) into an element tree.
         """
         self._folderpath = Path( '../sourceXML' )
-        self._filenameBase = 'BiblePublicationDetails'
+        self._filenameBase = 'BiblePublicationsDetails'
 
         # These fields are used for parsing the XML
         self._treeTag = 'BiblePublications'
@@ -102,7 +102,7 @@ class BiblePublicationDetailsConverter:
 
         # self._defaultOutputFolderpath = BibleOrgSysGlobals.DEFAULT_WRITEABLE_DERIVED_DATAFILES_FOLDERPATH
         self._defaultOutputFolderpath = Path( '../derivedFiles/' )
-    # end of BiblePublicationDetailsConverter.__init__
+    # end of BiblePublicationsDetailsConverter.__init__
 
 
     def __str__( self ) -> str:
@@ -118,13 +118,13 @@ class BiblePublicationDetailsConverter:
         if self.date: result += ('\n' if result else '') + "  Date: {}".format( self.date )
         result += ('\n' if result else '') + "  Number of entries = {}".format( len(self._XMLTree) )
         return result
-    # end of BiblePublicationDetailsConverter.__str__
+    # end of BiblePublicationsDetailsConverter.__str__
 
 
     def __len__( self ):
         """ Returns the number of items loaded. """
         return len( self._XMLTree )
-    # end of BiblePublicationDetailsConverter.__len__
+    # end of BiblePublicationsDetailsConverter.__len__
 
 
     def loadAndValidate( self, XMLFileOrFilepath=None ):
@@ -142,7 +142,7 @@ class BiblePublicationDetailsConverter:
             if BibleOrgSysGlobals.strictCheckingFlag:
                 self._validate()
         return self
-    # end of BiblePublicationDetailsConverter.loadAndValidate
+    # end of BiblePublicationsDetailsConverter.loadAndValidate
 
 
     def _load( self, XMLFileOrFilepath ):
@@ -154,7 +154,7 @@ class BiblePublicationDetailsConverter:
         self.__XMLFileOrFilepath = XMLFileOrFilepath
         assert self._XMLTree is None or len(self._XMLTree)==0 # Make sure we're not doing this twice
 
-        vPrint( 'Info', debuggingThisModule, _("Loading BiblePublicationDetails XML file from {!r}…").format( self.__XMLFileOrFilepath ) )
+        vPrint( 'Info', debuggingThisModule, _("Loading BiblePublicationsDetails XML file from {!r}…").format( self.__XMLFileOrFilepath ) )
         self._XMLTree = ElementTree().parse( self.__XMLFileOrFilepath )
         assert self._XMLTree # Fail here if we didn't load anything at all
 
@@ -179,7 +179,7 @@ class BiblePublicationDetailsConverter:
                 logging.warning( _("Missing header element (looking for {!r} tag)").format( self._headerTag ) )
         else:
             logging.error( _("Expected to load {!r} but got {!r}").format( self._treeTag, self._XMLTree.tag ) )
-    # end of BiblePublicationDetailsConverter._load
+    # end of BiblePublicationsDetailsConverter._load
 
 
     def _validate( self ):
@@ -292,7 +292,7 @@ class BiblePublicationDetailsConverter:
             print( f"\n({len(abbreviationList)}) {abbreviationList=}" )
             print( f"\n({len(abbreviationDict)}) {abbreviationDict=}" )
             print( f"\n({len(publicationDict)}) publicationDict={str(publicationDict).replace('''defaultdict(<class 'list'>, {''','').replace('})','')}" )
-    # end of BiblePublicationDetailsConverter._validate
+    # end of BiblePublicationsDetailsConverter._validate
 
 
     def importDataToPython( self ):
@@ -434,15 +434,15 @@ class BiblePublicationDetailsConverter:
             folder = self._defaultOutputFolderpath
             if not os.path.exists( folder ): os.mkdir( folder )
             filepath = os.path.join( folder, f'{self._filenameBase}.md' )
-        vPrint( 'Quiet', debuggingThisModule, f"Output BiblePublicationDetails summary to {filepath}…" )
+        vPrint( 'Quiet', debuggingThisModule, f"Output BiblePublicationsDetails summary to {filepath}…" )
         with open( filepath, 'wt', encoding='utf-8' ) as myFile:
-            myFile.write( "# Bible Publication Details\n\n" )
+            myFile.write( "# Bible Publications Details\n\n" )
             for abbrev in sorted(indexDict):
                 # print( f"{abbrev=} {indexDict[abbrev][0]=}" )
                 details = dataDict[indexDict[abbrev][0]]['publicationNames']
                 if len(details)==1 and details[0][0]=='en':
                     details = details[0][1]
-                myFile.write( f"{abbrev}: {details}\n" )
+                myFile.write( f"- {abbrev}: {details}\n" )
     # end of outputSummary
 
 
@@ -460,7 +460,7 @@ class BiblePublicationDetailsConverter:
             folder = self._defaultOutputFolderpath
             if not os.path.exists( folder ): os.mkdir( folder )
             filepath = os.path.join( folder, self._filenameBase + '_Tables.pickle' )
-        vPrint( 'Quiet', debuggingThisModule, f"Exporting BiblePublicationDetails to {filepath}…" )
+        vPrint( 'Quiet', debuggingThisModule, f"Exporting BiblePublicationsDetails to {filepath}…" )
         with open( filepath, 'wb' ) as myFile:
             pickle.dump( self.__dataDicts, myFile )
     # end of pickle
@@ -489,7 +489,7 @@ class BiblePublicationDetailsConverter:
         dataDict, indexDict, combinedIndexDict = self.importDataToPython()
         with open( filepath, 'wt', encoding='utf-8' ) as myFile:
             myFile.write( "# {}\n#\n".format( filepath ) )
-            myFile.write( "# This UTF-8 file was automatically generated by BiblePublicationDetailsConverter.py V{} on {}\n#\n".format( PROGRAM_VERSION, datetime.now() ) )
+            myFile.write( "# This UTF-8 file was automatically generated by BiblePublicationsDetailsConverter.py V{} on {}\n#\n".format( PROGRAM_VERSION, datetime.now() ) )
             if self.title: myFile.write( "# {}\n".format( self.title ) )
             if self.version: myFile.write( "#  Version: {}\n".format( self.version ) )
             if self.date: myFile.write( "#  Date: {}\n#\n".format( self.date ) )
@@ -568,7 +568,7 @@ class BiblePublicationDetailsConverter:
         ifdefName = self._filenameBase.upper() + "_Tables_h"
         with open( filepath, 'wt', encoding='utf-8' ) as myFile:
             myFile.write( "// {}\n//\n".format( filepath ) )
-            myFile.write( "// This UTF-8 file was automatically generated by BiblePublicationDetailsConverter.py V{} on {}\n//\n".format( PROGRAM_VERSION, datetime.now() ) )
+            myFile.write( "// This UTF-8 file was automatically generated by BiblePublicationsDetailsConverter.py V{} on {}\n//\n".format( PROGRAM_VERSION, datetime.now() ) )
             if self.title: myFile.write( "// {}\n".format( self.title ) )
             if self.version: myFile.write( "//  Version: {}\n".format( self.version ) )
             if self.date: myFile.write( "//  Date: {}\n//\n".format( self.date ) )
@@ -582,7 +582,7 @@ class BiblePublicationDetailsConverter:
             exportPythonDict( myFile, PNDict, "PNDict", "{char* PTNum; int id; char* PTAbbrev; char* refAbbrev; char* SBLAbbrev; char* OSISAbbrev; char* EngName;}", "ParatextNumberString (sorted), ParatextAbbreviation, referenceAbbreviation, SBLAbbreviation, OSISAbbreviation, id, nameEnglish (comment only)" )
             myFile.write( "#endif // {}\n".format( ifdefName ) )
     # end of exportDataToC
-# end of BiblePublicationDetailsConverter class
+# end of BiblePublicationsDetailsConverter class
 
 
 
@@ -592,7 +592,7 @@ def briefDemo() -> None:
     """
     BibleOrgSysGlobals.introduceProgram( __name__, programNameVersion, LAST_MODIFIED_DATE )
 
-    bpdc = BiblePublicationDetailsConverter().loadAndValidate()
+    bpdc = BiblePublicationsDetailsConverter().loadAndValidate()
     vPrint( 'Normal', debuggingThisModule, bpdc ) # Print a summary
 
     if BibleOrgSysGlobals.commandLineArguments.export:
@@ -621,4 +621,4 @@ if __name__ == '__main__':
     fullDemo()
 
     BibleOrgSysGlobals.closedown( PROGRAM_NAME, PROGRAM_VERSION )
-# end of BiblePublicationDetailsConverter.py
+# end of BiblePublicationsDetailsConverter.py

@@ -1,4 +1,4 @@
-# Bible Publication Details Derived Files
+# Bible Publications Details Derived Files
 
 None of the files in this folder (other than this ReadMe) should be edited --
 they are all derived from the XML source file.

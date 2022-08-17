@@ -1,4 +1,4 @@
-# Bible Publication Details
+# Bible Publications Details
 
 **A detailed registry of Bible originals, translations, editions, and publications**
 

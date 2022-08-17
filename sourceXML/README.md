@@ -1,4 +1,4 @@
-# Bible Publication Details Source XML
+# Bible Publications Details Source XML
 
 ## Fields
 

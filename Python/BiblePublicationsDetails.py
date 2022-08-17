@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 #
-# BiblePublicationDetails.py
+# BiblePublicationsDetails.py
 #
-# Module handling BiblePublicationDetails
+# Module handling BiblePublicationsDetails
 #
 # Copyright (C) 2010-2022 Robert Hunt
 # Author: Robert Hunt <Freely.Given.org+BOS@gmail.com>
@@ -23,9 +23,9 @@
 #   along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
 """
-Module handling BiblePublicationDetails.
+Module handling BiblePublicationsDetails.
 
-BiblePublicationDetails class:
+BiblePublicationsDetails class:
     __init__( self ) # We can't give this parameters because of the singleton
     loadData( self, XMLFileOrFilepath=None )
     __str__( self )
@@ -75,8 +75,8 @@ from BibleOrgSys.Reference.VerseReferences import SimpleVerseKey
 
 
 LAST_MODIFIED_DATE = '2022-07-12' # by RJH
-SHORT_PROGRAM_NAME = "BiblePublicationDetails"
-PROGRAM_NAME = "Bible Publication Details handler"
+SHORT_PROGRAM_NAME = "BiblePublicationsDetails"
+PROGRAM_NAME = "Bible Publications Details handler"
 PROGRAM_VERSION = '0.35'
 programNameVersion = f'{SHORT_PROGRAM_NAME} v{PROGRAM_VERSION}'
 
@@ -85,9 +85,9 @@ debuggingThisModule = False
 
 
 #@singleton # Can only ever have one instance (but doesn't work for multiprocessing
-class BiblePublicationDetails:
+class BiblePublicationsDetails:
     """
-    Class for handling BiblePublicationDetails.
+    Class for handling BiblePublicationsDetails.
 
     This class doesn't deal at all with XML, only with Python dictionaries, etc.
     """
@@ -97,7 +97,7 @@ class BiblePublicationDetails:
         Constructor:
         """
         self.__dataDict = self.__indexDict = self.__combinedIndexDict = None # We'll import into this in loadData
-    # end of BiblePublicationDetails.__init__
+    # end of BiblePublicationsDetails.__init__
 
     def loadData( self, XMLFileOrFilepath=None ):
         """ Loads the pickle or XML data file and imports it to dictionary format (if not done already). """
@@ -105,8 +105,8 @@ class BiblePublicationDetails:
         if not self.__dataDict or not self.__indexDict: # Don't do this unnecessarily
             if XMLFileOrFilepath is None:
                 # See if we can load from the pickle file (faster than loading from the XML)
-                standardXMLFileOrFilepath = BibleOrgSysGlobals.BOS_DATAFILES_FOLDERPATH.joinpath( "BiblePublicationDetails.xml" )
-                standardPickleFilepath = BibleOrgSysGlobals.BOS_DERIVED_DATAFILES_FOLDERPATH.joinpath( "BiblePublicationDetails_Tables.pickle" )
+                standardXMLFileOrFilepath = BibleOrgSysGlobals.BOS_DATAFILES_FOLDERPATH.joinpath( "BiblePublicationsDetails.xml" )
+                standardPickleFilepath = BibleOrgSysGlobals.BOS_DERIVED_DATAFILES_FOLDERPATH.joinpath( "BiblePublicationsDetails_Tables.pickle" )
                 try:
                     pickleIsNewer = os.stat(standardPickleFilepath).st_mtime > os.stat(standardXMLFileOrFilepath).st_mtime \
                                 and os.stat(standardPickleFilepath).st_ctime > os.stat(standardXMLFileOrFilepath).st_ctime
@@ -123,15 +123,15 @@ class BiblePublicationDetails:
                     self.__dataDict, self.__indexDict, self.__combinedIndexDict = result
                     return self # So this command can be chained after the object creation
             # else: # We have to load the XML (much slower)
-            from BibleOrgSys.Reference.Converters.BiblePublicationDetailsConverter import BiblePublicationDetailsConverter
+            from BibleOrgSys.Reference.Converters.BiblePublicationsDetailsConverter import BiblePublicationsDetailsConverter
             if XMLFileOrFilepath is not None: logging.warning( _("Bible organisational systems are already loaded -- your given filepath of {!r} was ignored").format(XMLFileOrFilepath) )
-            bosc = BiblePublicationDetailsConverter()
+            bosc = BiblePublicationsDetailsConverter()
             bosc.loadAndValidate( XMLFileOrFilepath ) # Load the XML (if not done already)
             result = bosc.importDataToPython() # Get the various dictionaries organised for quick lookup
         if result is not None:
             self.__dataDict, self.__indexDict, self.__combinedIndexDict = result
         return self # So this command can be chained after the object creation
-    # end of BiblePublicationDetails.loadData
+    # end of BiblePublicationsDetails.loadData
 
 
     def __str__( self ) -> str:
@@ -141,7 +141,7 @@ class BiblePublicationDetails:
         @return: the name of a Bible object formatted as a string
         @rtype: string
         """
-        result = "BiblePublicationDetails object"
+        result = "BiblePublicationsDetails object"
         result += ('\n' if result else '') + "  Number of entries = {}".format( len(self.__dataDict) )
         if BibleOrgSysGlobals.verbosityLevel > 1: # Do a bit of extra analysis
             counters = {}
@@ -151,7 +151,7 @@ class BiblePublicationDetails:
             for possibleType in BibleOrgSysGlobals.ALLOWED_ORGANISATIONAL_TYPES:
                 if counters[possibleType]: result += "    {} {}(s)".format( counters[possibleType], possibleType )
         return result
-    # end of BiblePublicationDetails.__str__
+    # end of BiblePublicationsDetails.__str__
 
 
     def __len__( self ):
@@ -162,7 +162,7 @@ class BiblePublicationDetails:
         #dPrint( 'Quiet', debuggingThisModule, '2', len(self.__indexDict) )
         #dPrint( 'Quiet', debuggingThisModule, '3', len(self.__combinedIndexDict) )
         return len( self.__dataDict )
-    # end of BiblePublicationDetails.__len__
+    # end of BiblePublicationsDetails.__len__
 
 
     def getAvailableOrganisationalSystemNames( self, extended=False ):
@@ -177,7 +177,7 @@ class BiblePublicationDetails:
             return result
         # else:
         return [x for x in self.__indexDict]
-    # end of BiblePublicationDetails.getAvailableOrganisationalSystemNames
+    # end of BiblePublicationsDetails.getAvailableOrganisationalSystemNames
 
 
     def getOrganisationalSystem( self, systemName, suppressErrors=False ):
@@ -210,7 +210,7 @@ class BiblePublicationDetails:
         if not suppressErrors:
             logging.error( _("No {!r} system in Bible Organisational Systems").format( systemName ) )
             if BibleOrgSysGlobals.verbosityLevel>2: logging.error( _("Available systems are {}").format( self.getAvailableOrganisationalSystemNames( extended=True ) ) )
-    # end of BiblePublicationDetails.getOrganisationalSystem
+    # end of BiblePublicationsDetails.getOrganisationalSystem
 
 
     def getOrganisationalSystemValue( self, systemName, valueName, suppressErrors=False ):
@@ -244,8 +244,8 @@ class BiblePublicationDetails:
                         if result is not None: return result
             # else we couldn't find it anywhere
             logging.error( _("{} Bible Organisational System has no {} specified (a)").format( systemName, valueName ) )
-    # end of BiblePublicationDetails.getOrganisationalSystemValue
-# end of BiblePublicationDetails class
+    # end of BiblePublicationsDetails.getOrganisationalSystemValue
+# end of BiblePublicationsDetails class
 
 
 
@@ -298,7 +298,7 @@ class BibleOrganisationalSystem( BibleBookOrderSystem, BibleVersificationSystem,
 
         vPrint( 'Info', debuggingThisModule, _("Loading {!r} system").format( systemName ) )
         assert systemName and isinstance( systemName, str )
-        self.__boss = BiblePublicationDetails().loadData() # Doesn't reload the XML unnecessarily :)
+        self.__boss = BiblePublicationsDetails().loadData() # Doesn't reload the XML unnecessarily :)
         result = self.__boss.getOrganisationalSystem( systemName )
         if result is None:
             logging.critical( _("No {!r} system in Bible Organisational Systems").format( systemName ) )
@@ -591,9 +591,9 @@ def briefDemo() -> None:
     """
     BibleOrgSysGlobals.introduceProgram( __name__, programNameVersion, LAST_MODIFIED_DATE )
 
-    if 1: # Demo the BiblePublicationDetails object
+    if 1: # Demo the BiblePublicationsDetails object
         vPrint( 'Normal', debuggingThisModule, "\nTesting load of ALL Bible organisational systems…" )
-        boss = BiblePublicationDetails().loadData() # Doesn't reload the XML unnecessarily :)
+        boss = BiblePublicationsDetails().loadData() # Doesn't reload the XML unnecessarily :)
         vPrint( 'Normal', debuggingThisModule, boss ) # Just print a summary
         vPrint( 'Normal', debuggingThisModule, _("Available system names are: {}").format( boss.getAvailableOrganisationalSystemNames() ) )
 
@@ -629,9 +629,9 @@ def fullDemo() -> None:
     """
     BibleOrgSysGlobals.introduceProgram( __name__, programNameVersion, LAST_MODIFIED_DATE )
 
-    if 1: # Demo the BiblePublicationDetails object
+    if 1: # Demo the BiblePublicationsDetails object
         vPrint( 'Normal', debuggingThisModule, "\nTesting load of ALL Bible organisational systems…" )
-        boss = BiblePublicationDetails().loadData() # Doesn't reload the XML unnecessarily :)
+        boss = BiblePublicationsDetails().loadData() # Doesn't reload the XML unnecessarily :)
         vPrint( 'Normal', debuggingThisModule, boss ) # Just print a summary
         vPrint( 'Normal', debuggingThisModule, _("Available system names are: {}").format( boss.getAvailableOrganisationalSystemNames() ) )
 
@@ -672,4 +672,4 @@ if __name__ == '__main__':
     fullDemo()
 
     BibleOrgSysGlobals.closedown( PROGRAM_NAME, PROGRAM_VERSION )
-# end of BiblePublicationDetails.py
+# end of BiblePublicationsDetails.py
