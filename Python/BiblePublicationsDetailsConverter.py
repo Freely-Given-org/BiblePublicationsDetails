@@ -42,9 +42,9 @@ LAST_MODIFIED_DATE = '2022-08-17' # by RJH
 SHORT_PROGRAM_NAME = "BiblePublicationsDetailsConverter"
 PROGRAM_NAME = "Bible Publications Details converter"
 PROGRAM_VERSION = '0.31'
-programNameVersion = f'{PROGRAM_NAME} v{PROGRAM_VERSION}'
+PROGRAM_NAME_VERSION = f'{PROGRAM_NAME} v{PROGRAM_VERSION}'
 
-debuggingThisModule = False
+DEBUGGING_THIS_MODULE = False
 
 
 
@@ -154,7 +154,7 @@ class BiblePublicationsDetailsConverter:
         self.__XMLFileOrFilepath = XMLFileOrFilepath
         assert self._XMLTree is None or len(self._XMLTree)==0 # Make sure we're not doing this twice
 
-        vPrint( 'Info', debuggingThisModule, _("Loading BiblePublicationsDetails XML file from {!r}…").format( self.__XMLFileOrFilepath ) )
+        vPrint( 'Info', DEBUGGING_THIS_MODULE, _("Loading BiblePublicationsDetails XML file from {!r}…").format( self.__XMLFileOrFilepath ) )
         self._XMLTree = ElementTree().parse( self.__XMLFileOrFilepath )
         assert self._XMLTree # Fail here if we didn't load anything at all
 
@@ -288,7 +288,7 @@ class BiblePublicationsDetailsConverter:
             else:
                 logging.warning( _("Unexpected element: {} in record {}").format( element.tag, j ) )
 
-        if debuggingThisModule or BibleOrgSysGlobals.debugFlag:
+        if DEBUGGING_THIS_MODULE or BibleOrgSysGlobals.debugFlag:
             print( f"\n({len(abbreviationList)}) {abbreviationList=}" )
             print( f"\n({len(abbreviationDict)}) {abbreviationDict=}" )
             print( f"\n({len(publicationDict)}) publicationDict={str(publicationDict).replace('''defaultdict(<class 'list'>, {''','').replace('})','')}" )
@@ -372,7 +372,7 @@ class BiblePublicationsDetailsConverter:
 
         if BibleOrgSysGlobals.strictCheckingFlag: # We'll do quite a bit more cross-checking now
             for extendedReferenceAbbreviation,data in dataDict.items():
-                #dPrint( 'Quiet', debuggingThisModule, extendedReferenceAbbreviation, data )
+                #dPrint( 'Quiet', DEBUGGING_THIS_MODULE, extendedReferenceAbbreviation, data )
                 systemType = data['type']
                 if systemType=='edition':
                     if 'derivedFrom' in data: logging.error( _("{} shouldn't use 'derivedFrom' {!r}").format( extendedReferenceAbbreviation, data['derivedFrom'] ) )
@@ -389,7 +389,7 @@ class BiblePublicationsDetailsConverter:
                                         found += 1
                                 assert found > 0
                                 if found==1: # ah, it's not actually ambiguous
-                                    vPrint( 'Info', debuggingThisModule, _("Adjusted text used for {} from the ambiguous {!r} to the extended name {!r}").format( extendedReferenceAbbreviation, textAbbrev, foundOne ) )
+                                    vPrint( 'Info', DEBUGGING_THIS_MODULE, _("Adjusted text used for {} from the ambiguous {!r} to the extended name {!r}").format( extendedReferenceAbbreviation, textAbbrev, foundOne ) )
                                     data['usesText'].remove( textAbbrev)
                                     data['usesText'].append( foundOne )
                                 else: logging.warning( _("{} specifies ambiguous {!r} (could be {}) texts in 'usesText' field").format(extendedReferenceAbbreviation,textAbbrev,indexDict[textAbbrev]) )
@@ -434,7 +434,7 @@ class BiblePublicationsDetailsConverter:
             folder = self._defaultOutputFolderpath
             if not os.path.exists( folder ): os.mkdir( folder )
             filepath = os.path.join( folder, f'{self._filenameBase}.md' )
-        vPrint( 'Quiet', debuggingThisModule, f"Output BiblePublicationsDetails summary to {filepath}…" )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Output BiblePublicationsDetails summary to {filepath}…" )
         with open( filepath, 'wt', encoding='utf-8' ) as myFile:
             myFile.write( "# Bible Publications Details\n\n" )
             myFile.write( "## Abbreviations (brief summary)\n\n" )
@@ -461,7 +461,7 @@ class BiblePublicationsDetailsConverter:
             folder = self._defaultOutputFolderpath
             if not os.path.exists( folder ): os.mkdir( folder )
             filepath = os.path.join( folder, self._filenameBase + '_Tables.pickle' )
-        vPrint( 'Quiet', debuggingThisModule, f"Exporting BiblePublicationsDetails to {filepath}…" )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, f"Exporting BiblePublicationsDetails to {filepath}…" )
         with open( filepath, 'wb' ) as myFile:
             pickle.dump( self.__dataDicts, myFile )
     # end of pickle
@@ -485,7 +485,7 @@ class BiblePublicationsDetailsConverter:
         assert self.__dataDicts
 
         if not filepath: filepath = self._defaultOutputFolderpath.joinpath( self._filenameBase + '_Tables.py' )
-        vPrint( 'Quiet', debuggingThisModule, _("Exporting to {}…").format( filepath ) )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, _("Exporting to {}…").format( filepath ) )
 
         dataDict, indexDict, combinedIndexDict = self.importDataToPython()
         with open( filepath, 'wt', encoding='utf-8' ) as myFile:
@@ -515,7 +515,7 @@ class BiblePublicationsDetailsConverter:
         assert self.__dataDicts
 
         if not filepath: filepath = self._defaultOutputFolderpath.joinpath( self._filenameBase + '_Tables.json' )
-        vPrint( 'Quiet', debuggingThisModule, _("Exporting to {}…").format( filepath ) )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, _("Exporting to {}…").format( filepath ) )
         with open( filepath, 'wt', encoding='utf-8' ) as myFile:
             #myFile.write( "# {}\n#\n".format( filepath ) ) # Not sure yet if these comment fields are allowed in JSON
             #myFile.write( "# This UTF-8 file was automatically generated by BibleBooksCodes.py V{} on {}\n#\n".format( PROGRAM_VERSION, datetime.now() ) )
@@ -563,7 +563,7 @@ class BiblePublicationsDetailsConverter:
         assert self.__dataDicts
 
         if not filepath: filepath = self._defaultOutputFolderpath.joinpath( self._filenameBase + '_Tables.h' )
-        vPrint( 'Quiet', debuggingThisModule, _("Exporting to {}…").format( filepath ) )
+        vPrint( 'Quiet', DEBUGGING_THIS_MODULE, _("Exporting to {}…").format( filepath ) )
 
         dataDict, indexDict, combinedIndexDict = self.importDataToPython()
         ifdefName = self._filenameBase.upper() + "_Tables_h"
@@ -591,10 +591,10 @@ def briefDemo() -> None:
     """
     Main program to handle command line parameters and then run what they want.
     """
-    BibleOrgSysGlobals.introduceProgram( __name__, programNameVersion, LAST_MODIFIED_DATE )
+    BibleOrgSysGlobals.introduceProgram( __name__, PROGRAM_NAME_VERSION, LAST_MODIFIED_DATE )
 
     bpdc = BiblePublicationsDetailsConverter().loadAndValidate()
-    vPrint( 'Normal', debuggingThisModule, bpdc ) # Print a summary
+    vPrint( 'Normal', DEBUGGING_THIS_MODULE, bpdc ) # Print a summary
 
     if BibleOrgSysGlobals.commandLineArguments.export:
         bpdc.outputSummary()

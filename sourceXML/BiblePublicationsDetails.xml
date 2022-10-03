@@ -605,9 +605,22 @@ See the supplied README.md for more details.
   </BiblePublication>
 
   <BiblePublication type="translation">
+    <referenceAbbreviation>LG</referenceAbbreviation>
+    <languageCode>lat</languageCode>
+    <publicationName lang="en">The Lindisfarne Gospels</publicationName>
+    <translator>Bishop of Lindisfarne</translator>
+    <publicationDate>715</publicationDate>
+    <versificationSystem>None</versificationSystem>
+    <punctuationSystem>English</punctuationSystem>
+    <bookOrderSystem>EuropeanBible</bookOrderSystem>
+    <booksNamesSystem>eng_traditional</booksNamesSystem>
+    <includesBooks>MAT MRK LUK JHN</includesBooks>
+  </BiblePublication>
+
+  <BiblePublication type="translation">
     <referenceAbbreviation>BJ</referenceAbbreviation>
     <languageCode>ang</languageCode>
-    <publicationName lang="en">Unknown</publicationName>
+    <publicationName lang="en">Gospel of John in Saxon</publicationName>
     <translator>The Venerable Bede</translator>
     <publicationDate>735</publicationDate>
     <versificationSystem>None</versificationSystem>
@@ -617,6 +630,20 @@ See the supplied README.md for more details.
     <includesBooks>JHN</includesBooks>
     <webLink>https://en.wikipedia.org/wiki/Venerable_Bede</webLink>
     <webLink>https://en.wikipedia.org/wiki/List_of_works_by_Bede</webLink>
+  </BiblePublication>
+
+  <BiblePublication type="translation">
+    <referenceAbbreviation>LGE</referenceAbbreviation>
+    <languageCode>ang</languageCode>
+    <publicationName lang="en">The Lindisfarne Gospels in English</publicationName>
+    <derivedFrom>LG</derivedFrom>
+    <translator>Aldred</translator>
+    <publicationDate>950</publicationDate>
+    <versificationSystem>None</versificationSystem>
+    <punctuationSystem>English</punctuationSystem>
+    <bookOrderSystem>EuropeanBible</bookOrderSystem>
+    <booksNamesSystem>eng_traditional</booksNamesSystem>
+    <includesBooks>MAT MRK LUK JHN</includesBooks>
   </BiblePublication>
 
   <BiblePublication type="translation">
