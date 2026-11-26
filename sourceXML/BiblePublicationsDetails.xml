@@ -1992,8 +1992,8 @@ See the supplied README.md for more details.
     <bookOrderSystem>EuropeanBible</bookOrderSystem>
     <booksNamesSystem>eng_traditional</booksNamesSystem>
     <!--  TODO: Letter of Jeremiah (Bar ch. 6) after BAR, 1/2[slav] & 3 Esdras after MA2-->
-    <includesBooks>GEN EXO LEV NUM DEU JOS JDG RUT SA1 SA2 KI1 KI2 CH1 CH2 EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZE DAN HOS JOL AMO OBA JNA MIC NAH HAB ZEP HAG ZEC MAL TOB JDT ESG WIS
-                    SIR BAR PAZ SUS BEL MA1 MA2 MAN PS2 MA3
+    <includesBooks>GEN EXO LEV NUM DEU JOS JDG RUT SA1 SA2 KI1 KI2 CH1 CH2 EZR NEH EST JOB PSA PRO ECC SNG ISA JER LAM EZE DAN HOS JOL AMO OBA JNA MIC NAH HAB ZEP HAG ZEC MAL TOB JDT ESG PS2
+                    TOB JDT WIS SIR BAR LJE PAZ SUS BEL MA1 MA2 MAN MA3 MA4 GES LES
                     MAT MRK LUK JHN ACT ROM CO1 CO2 GAL EPH PHP COL TH1 TH2 TI1 TI2 TIT PHM HEB JAM PE1 PE2 JN1 JN2 JN3 JDE REV</includesBooks>
     <webLink>https://www.friendshippress.org/pages/about-the-nrsvue</webLink>
   </BiblePublication>
